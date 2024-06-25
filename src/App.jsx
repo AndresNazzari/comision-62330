@@ -9,6 +9,7 @@ function App() {
       <Navbar />
       <div>
         <h1>Bienvenidos {title}</h1>
+        <h1>DEVELOP</h1>
       </div>
     </>
   );
