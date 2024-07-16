@@ -4,12 +4,14 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer.
 import { categories } from "./mock/mockData.js";
 
 function App() {
-  const title = "Curso de React Comision 62330";
+  const estoEsUnaVariableConElTitulo = "Curso de React Comision 62330";
 
   return (
     <>
       <Navbar categories={categories} title="LOGO" />
-      <ItemListContainer title={title} />
+      <ItemListContainer title={estoEsUnaVariableConElTitulo} />
+
+      <ItemListContainer otroTitle="titulo por defecto" />
     </>
   );
 }

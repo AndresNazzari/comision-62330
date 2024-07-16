@@ -1,30 +1,23 @@
 /* eslint-disable react/prop-types */
 import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.scss";
+import ItemCount from "../ItemCount/ItemCount";
+import NavbarLink from "./NavbarLink";
 
-const Navbar = ({ categories, title }) => {
+const Navbar = (props) => {
   return (
     <>
       <div>
-        <h1>{title}</h1>
+        <h1>{props.title}</h1>
       </div>
       <nav className="navItems">
-        <a href="#" className="navItem">
-          {categories[0]}
-        </a>
-        <a href="#" className="navItem">
-          {categories[1]}
-        </a>
-        <a href="#" className="navItem">
-          {categories[2]}
-        </a>
-        <a href="#" className="navItem">
-          {categories[3]}
-        </a>
-        <a href="#" className="navItem">
-          {categories[4]}
-        </a>
+        <NavbarLink category={props.categories[0]} />
+        <NavbarLink category={props.categories[1]} />
+        <NavbarLink category={props.categories[2]} />
+        <NavbarLink category={props.categories[3]} />
+        <NavbarLink category={props.categories[4]} />
       </nav>
+      <ItemCount stock={55} initial={55} />
       <CartWidget />
     </>
   );
