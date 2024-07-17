@@ -11,7 +11,7 @@ function App() {
       <Navbar categories={categories} title="LOGO" />
       <ItemListContainer title={estoEsUnaVariableConElTitulo} />
 
-      <ItemListContainer otroTitle="titulo por defecto" />
+      {/* <ItemListContainer otroTitle="titulo por defecto" /> */}
     </>
   );
 }

@@ -1,6 +1,6 @@
 export const categories = ["normal", "electric", "fire", "water", "grass"];
 
-export const products = [
+export const items = [
   {
     id: 1,
     name: "Bulbasaur",
