@@ -31,7 +31,7 @@ function App() {
 }
 
 export default App;
-
+// TODO
 // Clase que viene ver si o si
 // BOOSTRAP
 // OPCIONAL: CUSTOM HOOK PAGINATION
