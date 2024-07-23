@@ -1,8 +1,12 @@
+/* eslint-disable react/prop-types */
+import { NavLink } from "react-router-dom";
+
 const NavbarLink = ({ category }) => {
+  // "/" + category;
   return (
-    <a href="#" className="navItem">
+    <NavLink to={`/${category}`} className="navItem">
       {category}
-    </a>
+    </NavLink>
   );
 };
 

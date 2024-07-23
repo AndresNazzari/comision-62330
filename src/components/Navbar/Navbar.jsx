@@ -1,9 +1,14 @@
 /* eslint-disable react/prop-types */
 import CartWidget from "../CartWidget/CartWidget";
+//import { getCategories } from "../../utils/fetchData";
 import "./Navbar.scss";
 import NavbarLink from "./NavbarLink";
+import logo from "../../assets/logo.png";
+//import { useEffect, useState } from "react";
+import { categories } from "../../mock/mockData";
 
-const Navbar = ({ categories, title }) => {
+const Navbar = ({ title }) => {
+  //const [categories, setCategories] = useState([]);
   // console.log(categories);
 
   // ForEach hace algo en cada iteracion pero no retorna nada
@@ -20,12 +25,20 @@ const Navbar = ({ categories, title }) => {
 
   // ["normal", "electric", "fire", "water", "grass"];
 
+  // useEffect(() => {
+  //   getCategories().then((data) => {
+  //     console.log(data);
+  //     setCategories(data);
+  //   });
+  // }, []);
+
   return (
-    <>
+    <nav>
       <div>
         <h1>{title}</h1>
+        <img src={logo} alt="" />
       </div>
-      <nav className="navItems">
+      <div className="navItems">
         {/* 
         <NavbarLink category={categories[0]} />
         <NavbarLink category={categories[1]} />
@@ -38,9 +51,9 @@ const Navbar = ({ categories, title }) => {
           //console.log(`estoy en la posicion ${index} del array`);
           return <NavbarLink key={index} category={element} />;
         })}
-      </nav>
+      </div>
       <CartWidget />
-    </>
+    </nav>
   );
 };
 

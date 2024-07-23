@@ -18,3 +18,11 @@ export const getProducts = (category) => {
     }
   });
 };
+
+export const getCategories = () => {
+  return fetch("https://fakestoreapi.com/products/categories").then((res) => {
+    return res.json();
+  });
+
+  // return fetch("https://fakestoreapi.com/products/categories").then((res) => res.json())
+};

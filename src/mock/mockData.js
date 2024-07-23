@@ -1,4 +1,4 @@
-export const categories = ["normal", "electric", "fire", "water", "grass"];
+export const categories = ["home", "normal", "electric", "fire", "water", "grass", "contact", "about"];
 
 export const items = [
   {
@@ -14,8 +14,7 @@ export const items = [
   {
     id: 2,
     name: "Ivysaur",
-    description:
-      "Ivysaur is a quadruped Pokémon that has blue-green skin with darker patches. ",
+    description: "Ivysaur is a quadruped Pokémon that has blue-green skin with darker patches. ",
     price: 200,
     stock: 20,
     category: ["grass"],
@@ -24,8 +23,7 @@ export const items = [
   {
     id: 4,
     name: "Charmander",
-    description:
-      "Charmander is a bipedal, reptilian Pokémon with a primarily orange body.",
+    description: "Charmander is a bipedal, reptilian Pokémon with a primarily orange body.",
     price: 400,
     stock: 40,
     category: ["fire"],
@@ -34,8 +32,7 @@ export const items = [
   {
     id: 7,
     name: "Squirtle",
-    description:
-      "Squirtle is a small Pokémon that resembles a light blue turtle.",
+    description: "Squirtle is a small Pokémon that resembles a light blue turtle.",
     price: 700,
     stock: 70,
     category: ["water"],
@@ -44,8 +41,7 @@ export const items = [
   {
     id: 25,
     name: "Pikachu",
-    description:
-      "This intelligent Pokémon roasts hard berries with electricity to make them tender enough to eat.",
+    description: "This intelligent Pokémon roasts hard berries with electricity to make them tender enough to eat.",
     price: 2500,
     stock: 250,
     category: ["electric", "normal"],

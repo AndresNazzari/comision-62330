@@ -53,7 +53,7 @@ const ItemListContainer = ({ title, otroTitle }) => {
   }
 
   return (
-    <>
+    <main>
       <button onClick={() => setCat("grass")}>Set Cat = grass</button>
       <button onClick={() => setCat("fire")}>Set Cat = fire</button>
       <button onClick={() => setCat("electric")}>Set Cat = electric</button>
@@ -63,7 +63,7 @@ const ItemListContainer = ({ title, otroTitle }) => {
         <ItemList products={products} />
         {/* <ItemCount stock={10} initial={1} /> */}
       </div>
-    </>
+    </main>
   );
 };
 
