@@ -1,4 +1,4 @@
-export const categories = ["home", "normal", "electric", "fire", "water", "grass", "contact", "about"];
+export const categories = ["normal", "electric", "fire", "water", "grass"];
 
 export const items = [
   {

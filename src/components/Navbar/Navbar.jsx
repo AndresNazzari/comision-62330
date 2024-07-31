@@ -6,7 +6,7 @@ import NavbarLink from "./NavbarLink";
 import logo from "../../assets/logo.png";
 //import { useEffect, useState } from "react";
 import { categories } from "../../mock/mockData";
-
+import { Link } from "react-router-dom";
 const Navbar = ({ title }) => {
   //const [categories, setCategories] = useState([]);
   // console.log(categories);
@@ -36,7 +36,9 @@ const Navbar = ({ title }) => {
     <nav>
       <div>
         <h1>{title}</h1>
-        <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
       </div>
       <div className="navItems">
         {/* 

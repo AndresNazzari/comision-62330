@@ -3,9 +3,10 @@ import Item from "../Item/Item";
 import styles from "./ItemList.module.scss";
 
 const ItemList = ({ products }) => {
-  return (
+  
+    return (
     <>
-      <div className={styles.container}>
+      <div className={`${styles.container} d-flex gap`}>
         {products.map((product) => {
           return <Item key={product.id} product={product} />;
         })}

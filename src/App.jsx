@@ -5,6 +5,7 @@ import Contact from "./components/Contact/Contact.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
 import Layout from "./pages/Layout.jsx";
 import Error404 from "./components/Error404/Error404.jsx";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 
 function App() {
   const estoEsUnaVariableConElTitulo = "Curso de React Comision 62330";
@@ -15,7 +16,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<ItemListContainer title={estoEsUnaVariableConElTitulo} />} />
-            <Route path="/home" element={<ItemListContainer title={estoEsUnaVariableConElTitulo} />} />
+            <Route path="/category/:categoryId" element={<ItemListContainer title={estoEsUnaVariableConElTitulo} />} />
+            <Route path="/product/:id" element={<ItemDetailContainer />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="*" element={<Error404 />} />
@@ -32,9 +34,5 @@ function App() {
 
 export default App;
 // TODO
-// Clase que viene ver si o si
-// BOOSTRAP
+
 // OPCIONAL: CUSTOM HOOK PAGINATION
-// TERMINAR ROUTING
-// NAVEGAR EN CATEGORIAS
-// VER DETALLE DE PRODUCTO
