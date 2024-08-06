@@ -1,8 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, handleOnBuy }) => {
+  const navigate = useNavigate();
   const [qty, setQty] = useState(initial);
+  const [itemAdded, setItemAdded] = useState(false);
 
   const handleClick = (op) => {
     op === "-" ? clickMenos() : clickMas();
@@ -24,12 +28,32 @@ const ItemCount = ({ stock, initial }) => {
     setQty(qty + 1);
   };
 
+  const handleAddToCart = () =>{
+    handleOnBuy(qty)
+    setItemAdded(true)
+  }
+
+  const handleGoToCheckout = () =>{
+    //hacer otras cosas, llamar otras funciones etc
+    setItemAdded(false)
+    navigate("/cart")
+  }
+
   return (
-    <div>
-      <button onClick={() => handleClick("-")}>-</button>
-      <span>{qty}</span>
-      <button onClick={() => handleClick("+")}>+</button>
-    </div>
+    <>
+      {itemAdded ? (
+        <Button variant="primary" onClick={handleGoToCheckout}>Checkout</Button>
+      ) : (
+        <>
+          <div>
+            <button onClick={() => handleClick("-")}>-</button>
+            <span>{qty}</span>
+            <button onClick={() => handleClick("+")}>+</button>
+          </div>
+          <Button variant="primary" onClick={handleAddToCart}>Add To Cart</Button>
+        </>
+      )}
+    </>
   );
 };
 

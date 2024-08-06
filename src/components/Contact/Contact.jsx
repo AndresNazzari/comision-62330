@@ -1,5 +1,8 @@
+import { useCartContext } from "../../context/CartContext";
+
 const Contact = () => {
-  return <h1>Contact Form</h1>;
+  const {titulo } = useCartContext();
+  return <h1>Contact Form de { titulo}</h1>;
 };
 
 export default Contact;
