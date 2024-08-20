@@ -29,6 +29,7 @@ const ItemListContainer = () => {
     if (categoryId) {
       productsCollection = query(productsCollection, where("category", "array-contains", categoryId));
     }
+   
     
     getDocs(productsCollection)
     .then(({docs}) => {
