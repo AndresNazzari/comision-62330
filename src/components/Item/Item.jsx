@@ -16,13 +16,6 @@ const Item = ({ product }) => {
         </Link>
       </Card.Body>
     </Card>
-
-    // <div>
-    //   <div>{product.name}</div>
-    //   <div>{product.description}</div>
-    //   <div>{product.price}</div>
-    //   <img src={product.image} alt="" />
-    // </div>
   );
 };
 

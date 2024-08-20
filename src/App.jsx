@@ -10,10 +10,7 @@ import Error404 from "./components/Error404/Error404.jsx";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 function App() {
-  //const estoEsUnaVariableConElTitulo = "Curso de React Comision 62330";
-
-  //desde aca acceder al context no deberia poder! ???
-
+  console.log("App", import.meta.env.VITE_API_KEY);
   return (
     <CartContextProvider>
       <BrowserRouter>
@@ -29,14 +26,8 @@ function App() {
           </Routes>
         </Layout>
       </BrowserRouter>
-      {/* <Navbar categories={categories} title="LOGO" />
-       <ItemListContainer title={estoEsUnaVariableConElTitulo} /> */}
-      {/* <ItemListContainer otroTitle="titulo por defecto" /> */}
     </CartContextProvider>
   );
 }
 
 export default App;
-// TODO
-
-// OPCIONAL: CUSTOM HOOK PAGINATION

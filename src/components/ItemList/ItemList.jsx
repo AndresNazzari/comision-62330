@@ -10,10 +10,6 @@ const ItemList = ({ products }) => {
         {products.map((product) => {
           return <Item key={product.id} product={product} />;
         })}
-
-        {/* <Item product={products[0]} />
-        <Item product={products[1]} />
-        <Item product={products[2]} /> */}
       </div>
     </>
   );

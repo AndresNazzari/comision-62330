@@ -34,7 +34,6 @@ const ItemCount = ({ stock, initial, handleOnBuy }) => {
   }
 
   const handleGoToCheckout = () =>{
-    //hacer otras cosas, llamar otras funciones etc
     setItemAdded(false)
     navigate("/cart")
   }
